@@ -1,6 +1,6 @@
 const express = require('express')
-const { notes } = require('./Develop/db/db.json')
-const viewroutes = require('Develop/routes/htmlroutes.js')
+const viewroutes = require('./routes/htmlroutes')
+const apiroutes = require('./routes/apiroutes')
 const app = express()
 
 //converts data to key/value pairings that can accessed in the req.body object
@@ -8,8 +8,9 @@ const app = express()
 app.use(express.urlencoded({ extended: true }))
 //takes incoming POST data in form of json and parses into req.body
 app.use(express.json())
+app.use(express.static('public'))
+app.use('/api', apiroutes)
 app.use('/', viewroutes)
-
 
 
 
