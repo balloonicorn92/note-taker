@@ -1,7 +1,7 @@
 const fs = require('fs')
 const db = require('../db/db.json')
 const router = require('express').Router()
-const uuid = require('uuid')
+const { v1: uuidv1 } = require('uuid')
 
 router.get('/notes', (req, res) => {
    let db = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
@@ -9,7 +9,7 @@ router.get('/notes', (req, res) => {
 })
 
 router.post('/notes', (req, res) => {
-    let noteModal = {id: uuid(), title: req.body.title, text: req.body.text} 
+    let noteModal = {id: uuidv1(), title: req.body.title, text: req.body.text} 
     db.push(noteModal)
     fs.writeFileSync('./db/db.json', JSON.stringify(db), (err) => {
         if (err) throw err
