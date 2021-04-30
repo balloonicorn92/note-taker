@@ -1,7 +1,7 @@
 const fs = require('fs')
 const db = require('../db/db.json')
 const router = require('express').Router()
-const uuid = require('uuid/v1')
+const uuid = require('uuid')
 
 router.get('/notes', (req, res) => {
    let db = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
