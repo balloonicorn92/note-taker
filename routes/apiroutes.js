@@ -1,12 +1,11 @@
-const { INSPECT_MAX_BYTES } = require('buffer')
 const fs = require('fs')
-const db = require('../Develop/db/db.json')
+const db = require('../db/db.json')
 const router = require('express').Router()
 
 
 router.get('/notes', (req, res) => {
    let db = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
-    res.json(db)
+    return res.json(db)
 })
 
 router.post('/notes', (req, res) => {
