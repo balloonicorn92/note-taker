@@ -20,7 +20,7 @@ router.post('/notes', (req, res) => {
 router.delete('/notes/:id', (req, res) => {
     fs.readFile("./db/db.json", (err, data) => {
         const notes = JSON.parse(data)
-        const updatedNotes = notes.filter(item => item.id !== parseInt(req.params.id))
+        const updatedNotes = notes.filter(item => item.id === parseInt(req.params.id))
 
         fs.writeFileSync("./db/db.json", JSON.stringify(updatedNotes), function (err, res) {
             if(err) throw err
