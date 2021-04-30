@@ -2,7 +2,7 @@ const express = require('express')
 const viewroutes = require('./routes/htmlroutes')
 const apiroutes = require('./routes/apiroutes')
 const app = express()
-const PORT = process.env.PORT || 3002;
+const PORT = 3001;
 
 //converts data to key/value pairings that can accessed in the req.body object
 //extended:true informs server that there may be sub-array data nested in it, look deep into the POST data as possible
