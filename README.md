@@ -35,7 +35,7 @@ THEN the note selected is deleted
 
 -----------------------
 ### Installation
-Just travel to deplyed website:
+Just travel to deployed website:
 
 
 -----------------------
