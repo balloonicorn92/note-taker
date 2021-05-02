@@ -36,7 +36,7 @@ THEN the note selected is deleted
 -----------------------
 ### Installation
 Just travel to deployed website:
-
+https://powerful-lake-69697.herokuapp.com/notes
 
 -----------------------
 ### Technologies used
@@ -47,7 +47,7 @@ Just travel to deployed website:
 
 -----------------------
 ### Demo
-![alt text](dist/img/demo.gif)
+![alt text](./img/demo.gif)
 
 -----------------------
 ### Questions and Contact
